@@ -41,6 +41,20 @@ public  static  void reverse1(ArrayList<Integer> list1){
 
 
 
+        List<String> list2= new ArrayList<>();
+        list2.add("hello");
+        list2.add("deep");
+        list2.add("jack");
+        list2.add("anj");
+
+        System.out.println("Original list:"+list2);
+        Collections.sort(list2);
+
+        System.out.println("Sorted list:"+list2);
+
+
+
+
 
 
     }

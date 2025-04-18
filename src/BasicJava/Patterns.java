@@ -207,10 +207,14 @@ public class Patterns {
     // 1 4 6 4 1
     public static void pascalsTriangle(int n) {
         for (int i = 0; i < n; i++) {
+            // Print leading spaces for formatting
+            for (int j = 0; j < n - i; j++) {
+                System.out.print(" ");
+            }
+
             int number = 1;
-            System.out.printf("%" + (n - i) * 2 + "s", "");
             for (int j = 0; j <= i; j++) {
-                System.out.printf("%4d", number);
+                System.out.print(number + " ");
                 number = number * (i - j) / (j + 1);
             }
             System.out.println();
