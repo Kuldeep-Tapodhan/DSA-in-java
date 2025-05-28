@@ -44,7 +44,6 @@ public class Prefixarray {
             sum+=array[i];
         }
 
-
         return sum;
     }
 
