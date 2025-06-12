@@ -39,7 +39,7 @@ public class gcd_lcm {
 
 
 
-    // here basic formula to find lcm with helf of gcd is used (jooo mujhe be yad nahi rehta😒)
+    // here  is basic formula to find lcm with helf of gcd is used (jooo mujhe be yad nahi rehta😒)
     static  int lcm(int x,int y){
         int gcd = gcd(x,y);
         return  (x*y)/gcd;

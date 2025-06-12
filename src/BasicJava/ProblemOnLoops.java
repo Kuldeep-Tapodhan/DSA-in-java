@@ -49,7 +49,7 @@ public class ProblemOnLoops {
         return seriesAnswer;
     }
 
-    // Function to calculate factorial
+    // Function to calculate Factorial
     public static int factorial(int num) {
         int fac = 1;
         int i = 1;

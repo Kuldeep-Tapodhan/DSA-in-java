@@ -6,7 +6,7 @@ public class Minimuncost_Frog_Jump {
             return 0;
         }
 
-        int op1= Math.absx + Minicost(h,n,i+1);
+        int op1= Math.abs(h[i] -h[i+1]) + Minicost(h,n,i+1);
         if(i==n-2)return  op1;
         int op2= Math.abs(h[i] -h[i+2]) + Minicost(h,n,i+2);
 

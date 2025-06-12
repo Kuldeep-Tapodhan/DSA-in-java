@@ -1,6 +1,6 @@
 package BasicJava.Recursion.recursionONSring;
 
-public class subsequ {
+public class Subsequ {
 
     static  void subseqq(String str,String currentans){
 

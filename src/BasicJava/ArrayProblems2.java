@@ -20,12 +20,6 @@ public class ArrayProblems2 {
         return count;
     }
 
-    /**
-     * Method to find the total number of triplets in the array whose sum is equal to the given value x
-     * @param array Array of integers
-     * @param target Target sum value
-     * @return Total number of triplets
-     */
     public static int countTripletsWithSum(int[] array, int target) {
         int count = 0;
         for (int i = 0; i < array.length; i++) {

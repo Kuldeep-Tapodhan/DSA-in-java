@@ -2,7 +2,7 @@ package BasicJava.Recursion.recursionONSring;
 
 import java.util.Scanner;
 // program that removes all the occurance of a character from the string...
-public class remmove_accurance_of_Chracher_in_String {
+public class Remmove_accurance_of_Chracher_in_String {
 
 
     public  static  String rremovechar(String str,char ch){

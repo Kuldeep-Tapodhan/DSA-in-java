@@ -2,7 +2,7 @@ package BasicJava.Recursion;
 
 import java.util.Scanner;
 
-public class maxelemet {
+public class Maxelemet {
 
     static int printmaxarray(int[] arr, int i){
 

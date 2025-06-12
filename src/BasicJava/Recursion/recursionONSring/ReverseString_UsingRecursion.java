@@ -2,7 +2,7 @@ package BasicJava.Recursion.recursionONSring;
 
 import java.util.Scanner;
 
-public class reverseString_UsingRecursion {
+public class ReverseString_UsingRecursion {
 
     public  static String reverseString(String str,int i){
         if (str.length()==i)return "";

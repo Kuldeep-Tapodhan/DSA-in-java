@@ -3,7 +3,7 @@ package BasicJava.Recursion.recursionONSring;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class subsequence {
+public class Subsequence {
 
     static ArrayList<String> subseque(String str){
         ArrayList<String> answer= new ArrayList<>();
