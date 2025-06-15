@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class SumOfDigit {
 
 
-    static  int sumofdigit(int n){
+   public static  int sumofdigit(int n){
         if (n==0){
             return 0;
         }

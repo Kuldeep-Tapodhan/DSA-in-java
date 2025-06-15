@@ -1,4 +1,4 @@
-/*
+package realtimeApplicationPractice;/*
 The Metro Bank provides various types of loans such as car loans, business loans and house loans
 to its account holders, i.e., customers.
 

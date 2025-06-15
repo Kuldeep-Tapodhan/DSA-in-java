@@ -1,4 +1,4 @@
-/***
+package realtimeApplicationPractice; /***
  Food Corner home delivers vegetarian and non-vegetarian meals to its customers based on the order.
 
  A vegetarian combo costs $12 per plate and a non-vegetarian combo costs $15 per plate.
