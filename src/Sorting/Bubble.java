@@ -10,12 +10,11 @@ public class Bubble {
             boolean flag=false;
             for (int j = 0; j <n-i-1 ; j++) {
                 if (array[j] > array[j+1]) {
-                    int temp=array[j];
-                    array[j]=array[j+1];
-                    array[j+1]=temp;
-                    flag=true;
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                    flag = true;
                 }
-
             }
             if (flag==false)return;
         }

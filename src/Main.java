@@ -1,7 +1,15 @@
 public class Main {
+    static  int a=5;
+
+    public static void solve(){
+        System.out.println(a);
+    }
     public static void main(String[] args) {
 
-        System.out.println("Hello"+args[0]);
+        solve();
     }
+
+
+
 
 }
