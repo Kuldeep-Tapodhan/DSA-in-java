@@ -57,6 +57,13 @@ public class StringBasic {
             System.out.println("s1 vs null: NullPointerException caught");
         }
 
+
+        System.out.println(str.concat("Hello"));
+        str.endsWith("dde");
+
+        String sq="hello";
+        System.out.println(sq.endsWith("lo"));
+
     }
 
 }
