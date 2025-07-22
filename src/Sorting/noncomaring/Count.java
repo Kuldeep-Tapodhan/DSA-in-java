@@ -1,4 +1,4 @@
-package Sorting;
+package Sorting.noncomaring;
 
 import static BasicJava.helping.displayarr;
 import static BasicJava.helping.max;
