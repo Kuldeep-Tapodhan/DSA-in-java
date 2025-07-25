@@ -12,7 +12,7 @@ public class CountPalindromicSubstrings {
             if(str.charAt(i)!=str.charAt(j))return false;
             i++;
             j--;
-        }
+        }//n
         return true;
     }
 
