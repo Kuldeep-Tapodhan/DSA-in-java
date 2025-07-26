@@ -39,6 +39,8 @@ package OOPs;
  **/
 public class Studentclass {
 
+
+    // class is a data type or a blue print
     public  static  class student{
         String name;
         double roll;
@@ -48,6 +50,9 @@ public class Studentclass {
     }
 
     public static void main(String[] args) {
+
+
+        // object are the instance of class or letral of the class
         student s=new student();
         s.Class="X";
         s.contact=88888888;
