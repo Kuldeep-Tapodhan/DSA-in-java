@@ -32,7 +32,7 @@ public class gcd_lcm {
 
 
     // euclidian formula to find gcd is used here so chilll...
-    static  int gcd(int x,int y){
+    public static  int gcd(int x, int y){
         if(y==0) return x;
         return  gcd(y,x%y);
     }
