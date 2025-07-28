@@ -141,6 +141,23 @@ public void printhelpeer(){
 
 
     }
+    public  void  getelemtatindex(int index){
+        node current=head;
+        for (int i = 0; i <index ; i++) {
+            current=current.getNext();
+        }
+        System.out.println(current.getData());
+
+    }
+
+    public void deleteatindex(int index){
+        node current=head;
+        for (int i = 0; i <index-1 ; i++) {
+            current=current.getNext();
+        }
+        current.setNext(current.getNext().getNext());
+
+    }
 
 
     public void insetatindx1(int index, String str) {
@@ -208,7 +225,9 @@ public class LinkedList {
         l.printhelpeer();
         l.insetatindx(3,"Hey Anj");
         l.printhelpeer();
-
+        l.getelemtatindex(3);
+        l.deleteatindex(3);
+        l.printhelpeer();
 
     }
 
