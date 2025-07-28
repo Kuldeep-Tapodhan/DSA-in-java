@@ -2,33 +2,24 @@ package LinkedList;
 
 
 class node{
-
     String data;
     node next;
-
     public  node(String data){
         this.data=data;
     }
-
     public String getData() {
         return data;
     }
-
     public void setData(String data) {
         this.data = data;
     }
-
     public node getNext() {
         return next;
     }
-
     public void setNext(node next) {
         this.next = next;
     }
-
-
 }
-
 
 class ll{
 
@@ -64,6 +55,7 @@ class ll{
             this.head=n;
         }
     }
+
 public boolean  delete(String data) {
     if (head == null) {
         return false;
@@ -79,15 +71,16 @@ public boolean  delete(String data) {
             return true;
         }
         current = current.getNext();
-
-
-
     }
-    
     return false;
 }
 
-    public int getCount() {
+
+public int lengthviarecusion(node head){
+        if (head==null)return 0;
+        return 1+lengthviarecusion(head.getNext());
+}
+    public int length() {
         node curre=this.head;
         int count=1;
         if (head==null){
@@ -99,6 +92,7 @@ public boolean  delete(String data) {
         }
         return count;
     }
+
 
 
     public node Searchelemt(String data){
@@ -113,6 +107,19 @@ public boolean  delete(String data) {
     }
 
 
+public  void printelememtviarescursion(node head){
+
+    if (head==null)return;
+    System.out.print(head.getData()+" ");
+    printelememtviarescursion(head.getNext());
+}
+
+public void printhelpeer(){
+        printelememtviarescursion(head);
+    System.out.println("\n"+ lengthviarecusion(head));
+}
+
+
     public void printAllElements() {
         node current = this.head;
         while (current != null) {
@@ -122,10 +129,56 @@ public boolean  delete(String data) {
         System.out.println();
     }
 
-   public void  deleteatend(){
+    public  void  insetatindx(int index,String str){
+        node current=head;
+        node n=new node(str);
+        for (int i = 0; i <index-1 ; i++) {
+            current=current.getNext();
+        }
 
-   }
+        n.setNext(current.getNext());
+        current.setNext(n);
 
+
+    }
+
+
+    public void insetatindx1(int index, String str) {
+        node n = new node(str);
+
+        // Case 1: Insert at beginning
+        if (index == 0) {
+            n.setNext(head);
+            head = n;
+            if (tail == null) tail = n; // if list was empty
+            return;
+        }
+
+        node current = head;
+
+        // Traverse to index - 1
+        for (int i = 0; i < index - 1; i++) {
+            if (current == null) {
+                System.out.println("Index out of bounds.");
+                return;
+            }
+            current = current.getNext();
+        }
+
+        if (current == null) {
+            System.out.println("Index out of bounds.");
+            return;
+        }
+
+        // Insert in middle or end
+        n.setNext(current.getNext());
+        current.setNext(n);
+
+        //Update tail if inserted at end
+        if (n.getNext() == null) {
+            tail = n;
+        }
+    }
 
 }
 public class LinkedList {
@@ -134,25 +187,28 @@ public class LinkedList {
         ll l=new ll();
         l.addatend("Hello");
         l.addatbegin("World");
-        l.addatbegin("Harshil");
+        l.addatbegin("Deep Tapodhan");
         l.addatend("Hello");
         l.addatbegin("World");
-        l.addatbegin("Harshil");
+        l.addatbegin("Deep Tapodhan");
         l.addatend("Hello");
         l.addatbegin("World");
-        l.addatbegin("Harshil");
+        l.addatbegin("Deep Tapodhan");
         l.addatend("Hello");
         l.addatbegin("World");
-        l.addatbegin("Harshil");
+        l.addatbegin("Deep Tapodhan");
         l.addatend("Hello");
         l.addatbegin("World");
-        l.addatbegin("Harshil");
+        l.addatbegin("Deep Tapodhan");
         l.printAllElements();
         System.out.println(l.Searchelemt("Hello"));
-//        l.delete("Harshil");
-
+        l.delete("Harshil");
         l.printAllElements();
-        System.out.println(l.getCount());
+        System.out.println(l.length());
+        l.printhelpeer();
+        l.insetatindx(3,"Hey Anj");
+        l.printhelpeer();
+
 
     }
 
