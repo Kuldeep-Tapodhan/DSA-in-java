@@ -45,6 +45,15 @@ class ll{
         }
     }
 
+    public node find(String data) {
+        node temp = head;
+        while (temp != null) {
+            if (temp.getData().equals(data)) return temp;
+            temp = temp.getNext();
+        }
+        return null;
+    }
+
     public void addatbegin(String data){
         node n = new node(data);
         if (this.head==null){
