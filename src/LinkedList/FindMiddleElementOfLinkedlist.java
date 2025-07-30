@@ -18,6 +18,18 @@
             return middle;
         }
 
+        public static node middlenodeopimze(node head) {
+            node slow = head;
+            node fast = head;
+
+            while (fast != null && fast.getNext() != null) {
+                slow = slow.getNext();
+                fast = fast.getNext().getNext();
+            }
+
+            return slow;
+        }
+
         public static void main(String[] args) {
             ll list = new ll();
             list.addatend("A");
@@ -31,5 +43,6 @@
             System.out.print("Linked List: ");
             list.printAllElements();
             System.out.println(middlenode(list.getHead()).getData());
+            System.out.println(middlenodeopimze(list.getHead()).getData());
         }
     }
