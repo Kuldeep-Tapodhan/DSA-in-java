@@ -39,7 +39,7 @@ class ll{
         if (this.head==null){
             this.head=this.tail=n;
         }
-     else {
+        else {
             this.tail.setNext(n);
             this.tail=n;
         }
@@ -60,35 +60,35 @@ class ll{
             this.head=this.tail=n;
         }
         else {
-           n.setNext(this.head);
+            n.setNext(this.head);
             this.head=n;
         }
     }
 
-public boolean  delete(String data) {
-    if (head == null) {
+    public boolean  delete(String data) {
+        if (head == null) {
+            return false;
+        }
+        if (head.getData().equals(data)) {
+            head = head.getNext();
+        }
+        node current = this.head;
+        while (current != null) {
+            if (current.getData().equals(data)) {
+                current.setNext(current.getNext().getNext());
+                if (current.getNext() == null) tail = current;
+                return true;
+            }
+            current = current.getNext();
+        }
         return false;
     }
-    if (head.getData().equals(data)) {
-        head = head.getNext();
-    }
-    node current = this.head;
-    while (current != null) {
-        if (current.getData().equals(data)) {
-            current.setNext(current.getNext().getNext());
-            if (current.getNext() == null) tail = current;
-            return true;
-        }
-        current = current.getNext();
-    }
-    return false;
-}
 
 
-public int lengthviarecusion(node head){
+    public int lengthviarecusion(node head){
         if (head==null)return 0;
         return 1+lengthviarecusion(head.getNext());
-}
+    }
     public int length() {
         node curre=this.head;
         int count=1;
@@ -105,28 +105,28 @@ public int lengthviarecusion(node head){
 
 
     public node Searchelemt(String data){
-      node current=this.head;
-      while (current!=null){
-        if (current.getData().equals(data))return current;
-        else{
-            current=current.getNext();
+        node current=this.head;
+        while (current!=null){
+            if (current.getData().equals(data))return current;
+            else{
+                current=current.getNext();
+            }
         }
-      }
-      return null;
+        return null;
     }
 
 
-public  void printelememtviarescursion(node head){
+    public  void printelememtviarescursion(node head){
 
-    if (head==null)return;
-    System.out.print(head.getData()+" ");
-    printelememtviarescursion(head.getNext());
-}
+        if (head==null)return;
+        System.out.print(head.getData()+" ");
+        printelememtviarescursion(head.getNext());
+    }
 
-public void printhelpeer(){
+    public void printhelpeer(){
         printelememtviarescursion(head);
-    System.out.println("\n"+ lengthviarecusion(head));
-}
+        System.out.println("\n"+ lengthviarecusion(head));
+    }
 
 
     public void printAllElements() {
@@ -205,8 +205,21 @@ public void printhelpeer(){
             tail = n;
         }
     }
-
+    public void setHead(node head) {
+        this.head = head;
+        if (head == null) {
+            this.tail = null;
+            return;
+        }
+        node current = this.head;
+        while (current.getNext() != null) {
+            current = current.getNext();
+        }
+        this.tail = current;
+    }
 }
+
+
 public class LinkedList {
     public static void main(String[] args) {
 
