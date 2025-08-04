@@ -56,6 +56,9 @@ public class Statickey {
             this.email = email;
             numberOfStudents++; // Static variable incremented
         }
+        static int square(int x) {
+            return x * x;
+        }
     }
 
     public static void main(String[] args) {
@@ -68,7 +71,7 @@ public class Statickey {
 
         Student anj = new Student("Anj", 3, "12A", 3333333333L, "anj@example.com");
         System.out.println(Student.numberOfStudents);
-
+        System.out.println(Student.square(5));
 
     }
 }
