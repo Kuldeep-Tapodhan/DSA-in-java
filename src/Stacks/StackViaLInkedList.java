@@ -1,54 +1,86 @@
 package Stacks;
 
-class node {
+class stacknode {
     int data;
-    node next;
+    stacknode next;
 }
 
-class Stack {
-    node head = null;
+class StackLL {
+    stacknode head = null;
+    int size = 0;
 
     public void push(int x) {
-        node temp = new node();
+        stacknode temp = new stacknode();
         temp.data = x;
         temp.next = head;
         head = temp;
+        size++;
     }
 
     public void pop() {
         if (head == null) {
-            System.out.println("Stack Underflow");
+            System.out.println("StackLL Underflow");
             return;
         }
         head = head.next;
+        size--;
+    }
+
+    public boolean isempty() {
+        if (size==0)return true;
+        return false;
     }
 
     public int peek() {
         if (head == null) {
-            System.out.println("Stack is empty");
+            System.out.println("StackLL is empty");
             return -1;
         }
         return head.data;
+    }
+
+    public void display() {
+        if (head == null) {
+            System.out.println("StackLL is empty");
+            return;
+        }
+        System.out.print("Stack elements (top to bottom): ");
+        stacknode temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
     }
 }
 
 public class StackViaLInkedList {
     public static void main(String[] args) {
-        Stack stack = new Stack();
+        StackLL stack = new StackLL();
+
+        System.out.println("Is stack empty? " + stack.isempty());
 
         stack.push(10);
         stack.push(20);
         stack.push(30);
 
-        System.out.println(stack.peek());
+        stack.display();
+
+        System.out.println("Top element: " + stack.peek());
 
         stack.pop();
-        System.out.println(stack.peek());
+        System.out.println("After one pop:");
+        stack.display();
+        System.out.println("Is stack empty? " + stack.isempty());
 
         stack.pop();
         stack.pop();
+
+        System.out.println("After popping all elements:");
+        stack.display();
+
         stack.pop();
 
-        System.out.println(stack.peek());
+        System.out.println("Top element now: " + stack.peek());
     }
 }
