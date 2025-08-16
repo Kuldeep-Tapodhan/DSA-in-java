@@ -3,7 +3,7 @@ public class Main {
 
 
     public static void solve(){
-        System.out.println(a);
+        System.out.println("this is solve...");
     }
     public static void main(String[] args) {
         main(23);
