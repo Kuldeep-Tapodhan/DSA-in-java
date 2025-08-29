@@ -19,6 +19,22 @@ public class palindrome {
         return false;
     }
 
+    public static boolean isPalindrome2(String xyz){
+        int n=xyz.length();
+        int left=0;
+        int right=n-1;
+        while (left<right){
+            if (xyz.charAt(left)!=xyz.charAt(right)){
+                return  false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
+
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

@@ -3,6 +3,7 @@ package BasicJava;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import static BasicJava.helping.swap;
 import static java.lang.Integer.MAX_VALUE;
 
 public class array {
@@ -121,7 +122,6 @@ public class array {
     // Function to check if an array is sorted
     public static void checkSortedArrayExample() {
         boolean sorted = true;
-        int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         int arr2[] = {1, 2, 3, 4, 5, 16, 7, 8, 9};
 
         // Checking if the array is sorted
@@ -147,11 +147,23 @@ public class array {
         System.out.println("Reversed array: " + Arrays.toString(arr));
     }
 
+    public static void reversearr2(int[] arr){
+        int n=arr.length;
+        int left=0;
+        int right=n-1;
+        while (left<right)
+        {
+            swap(arr,left,right);
+            left++;
+            right--;
+        }
+
+    }
+
     // Function to find the second largest element in an array
     public static void secondLargestElement(int[] arr) {
         int first = Integer.MIN_VALUE;
         int second = Integer.MIN_VALUE;
-
         // Finding the second largest element
         for (int i : arr) {
             if (i > first) {
